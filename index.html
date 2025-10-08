@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invexal - AI & IoT Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="static/images/logo.png" alt="Invexal Logo" class="logo-image">
+               
+            </div>
+            <div class="nav-menu">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="service.html" class="nav-link">Services</a>
+                <a href="results.html" class="nav-link">Results</a>
+                <a href="plans.html" class="nav-link">Plans</a>
+                <a href="client.html" class="nav-link">Clients</a>
+                <a href="whyus.html" class="nav-link">Why Us</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="faqs.html" class="nav-link">FAQs</a>
+            </div>
+            <button class="cta-button" onclick="scrollToContact()">
+                <i class="fas fa-arrow-right"></i>
+                Get in touch
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="static/images/video.mp4" type="video/mp4">
+            <source src="static/images/video.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="feature-tag">
+                <i class="fas fa-brain"></i>
+                CUTTING-EDGE AI & IOT SOLUTIONS
+            </div>
+            <h1 class="hero-title">Fuel Your Growth With Next-Gen AI & IoT</h1>
+            <p class="hero-subtitle">Unlock new levels of productivity with intelligent automation and smart connected systems.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">
+                    Let's get started
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn-secondary" onclick="scrollToContact()">
+                    <i class="fas fa-phone"></i>
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Solutions Section -->
+    <section class="ai-solutions-section">
+        <div class="ai-solutions-container">
+            <h2 class="ai-solutions-title">Our AI Solutions</h2>
+            <p class="ai-solutions-description">From automation to analytics, we turn your vision into AI solutions.</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3 class="solution-title">AI & IoT Integration</h3>
+                    <p class="solution-description">We build custom AI & IoT solutions that seamlessly connect intelligent systems with smart devices for maximum efficiency.</p>
+                    <div class="solution-demo">
+                        <div class="demo-interface">
+                            <div class="demo-header">
+                                <i class="fas fa-cog"></i>
+                                <span>AI IoT Controller</span>
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="demo-input">
+                                <input type="text" placeholder="Monitor sensor data and AI insights |" />
+                                <div class="demo-actions">
+                                    <span class="demo-action">
+                                        <i class="fas fa-comment"></i>
+                                        DATA ANALYTICS
+                                    </span>
+                                    <span class="demo-action">
+                                        <i class="fas fa-chart-bar"></i>
+                                        IOT TRACKING
+                                    </span>
+                                </div>
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <h3 class="solution-title">AI Computer Vision</h3>
+                    <p class="solution-description">We develop advanced computer vision systems that can see, analyze, and make intelligent decisions from visual data.</p>
+                    <div class="solution-demo">
+                        <div class="demo-interface">
+                            <div class="demo-header">
+                                <i class="fas fa-eye"></i>
+                                <span>Vision AI System</span>
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="demo-calls">
+                                <div class="call-item">
+                                    <div class="call-avatar">👤</div>
+                                    <div class="call-info">
+                                        <span class="call-label">Object Detection</span>
+                                        <span class="call-status">
+                                            <span class="status-dot"></span>
+                                            PROCESSING
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-microphone-slash"></i>
+                                </div>
+                                <div class="call-item">
+                                    <div class="call-avatar">🚗</div>
+                                    <div class="call-info">
+                                        <span class="call-label">Vehicle Recognition</span>
+                                        <span class="call-status">
+                                            <span class="status-dot"></span>
+                                            ANALYZING
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-microphone-slash"></i>
+                                </div>
+                                <div class="call-item">
+                                    <div class="call-avatar">🏭</div>
+                                    <div class="call-info">
+                                        <span class="call-label">Quality Control</span>
+                                        <span class="call-status">
+                                            <span class="status-dot"></span>
+                                            MONITORING
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-microphone-slash"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <h3 class="solution-title">AI Agents</h3>
+                    <p class="solution-description">We create intelligent AI agents that can learn, adapt, and execute complex tasks autonomously across your business processes.</p>
+                    <div class="solution-demo">
+                        <div class="demo-interface">
+                            <div class="demo-header">
+                                <i class="fas fa-user-robot"></i>
+                                <span>AI Agent Hub</span>
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="integration-demo">
+                                <div class="central-logo">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="integration-logos">
+                                    <div class="integration-logo">M</div>
+                                    <div class="integration-logo">AI</div>
+                                    <div class="integration-logo">S</div>
+                                    <div class="integration-logo">⚡</div>
+                                    <div class="integration-logo">❄️</div>
+                                    <div class="integration-logo">VO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <h3 class="solution-title">IoT All Solutions</h3>
+                    <p class="solution-description">We provide comprehensive IoT infrastructure and solutions for connected devices, smart systems, and data management.</p>
+                    <div class="solution-demo">
+                        <div class="demo-interface">
+                            <div class="demo-header">
+                                <i class="fas fa-network-wired"></i>
+                                <span>IoT Analytics</span>
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="metrics-demo">
+                                <div class="metric-item">
+                                    <span class="metric-label">CONNECTIVITY</span>
+                                    <span class="metric-value">+95%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">EFFICIENCY</span>
+                                    <span class="metric-value">+87%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">UPTIME</span>
+                                    <span class="metric-value">+99%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">COSTS</span>
+                                    <span class="metric-value">-23%</span>
+                                </div>
+                                <div class="chart-demo">
+                                    <div class="chart-bar" style="height: 60%"></div>
+                                    <div class="chart-bar" style="height: 80%"></div>
+                                    <div class="chart-bar" style="height: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <p class="trust-text">TRUSTED BY 100+ COMPANIES WORLDWIDE:</p>
+            <div class="company-logos">
+                <div class="logo">LII</div>
+                <div class="logo">IPSUM</div>
+                <div class="logo">LOCO</div>
+                <div class="logo">LII</div>
+                <div class="logo">IPS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Feature Section -->
+    <section class="our-team-section">
+        <div class="team-container">
+            <div class="team-header">
+                <h2 class="team-title">Our Feature </h2>
+                <p class="team-description">Skilled experts, not generic teams — we craft tailored AI & IoT systems that drive success and lasting impact.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/cold.jpg" alt="Lucas Harris" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Cold Chain Monitoring</h3>
+                                    <p class="team-role">IOT Solutions</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Cold Chain</h3>
+                                <p class="back-role">IOT Solutions</p>
+                                <div class="back-description">
+                                    <p>We develop advanced IoT solutions that can monitor and control the temperature of the cold chain.</p>
+                                 
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/coc.png" alt="Peter Johnson" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Conveyor Belt Monitoring</h3>
+                                    <p class="team-role">AI SOLUTIONS</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Conveyor Belt</h3>
+                                <p class="back-role">AI SOLUTIONS</p>
+                                <div class="back-description">
+                                    <p>We develop advanced computer vision systems that can see, analyze, and make intelligent decisions from visual data.</p>
+                                  
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/HELMET.jpg" alt="Daniel Lee" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Real Time PPE Monitoring</h3>
+                                    <p class="team-role">AI SOLUTIONS</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name"> Real Time PPE</h3>
+                                <p class="back-role">AI SOLUTIONS</p>
+                                <div class="back-description">
+                                    <p>We develop advanced computer vision systems that can see, analyze, and make intelligent decisions from visual data.</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/16.jpg" alt="Sofia Martin" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Bike Monitoring</h3>
+                                    <p class="team-role">IOT SOLUTIONS</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Bike Monitoring</h3>
+                                <p class="back-role">IOT SOLUTIONS</p>
+                                <div class="back-description">
+                                    <p>We develop advanced IoT solutions that can monitor and control the temperature of the cold chain.</p>
+                                   
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/cold.jpg" alt="Smart Agriculture" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Smart Agriculture</h3>
+                                    <p class="team-role">IOT SOLUTIONS</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Smart Agriculture</h3>
+                                <p class="back-role">IOT SOLUTIONS</p>
+                                <div class="back-description">
+                                    <p>Advanced IoT sensors for soil monitoring, crop health, and automated irrigation systems.</p>
+                              
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/coc.png" alt="Quality Control" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Quality Control</h3>
+                                    <p class="team-role">AI COMPUTER VISION</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Quality Control</h3>
+                                <p class="back-role">AI COMPUTER VISION</p>
+                                <div class="back-description">
+                                    <p>Real-time defect detection and quality assurance using advanced computer vision algorithms.</p>
+                                  
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/HELMET.jpg" alt="Smart Security" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Smart Security</h3>
+                                    <p class="team-role">AI & IOT SOLUTIONS</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Smart Security</h3>
+                                <p class="back-role">AI & IOT SOLUTIONS</p>
+                                <div class="back-description">
+                                    <p>Intelligent surveillance systems with facial recognition and automated threat detection.</p>
+                                   
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="team-image">
+                                <img src="static/images/16.jpg" alt="Energy Management" class="team-photo">
+                                <div class="team-overlay">
+                                    <h3 class="team-name">Energy Management</h3>
+                                    <p class="team-role">IOT SOLUTIONS</p>
+                                    <div class="team-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3 class="back-name">Energy Management</h3>
+                                <p class="back-role">IOT SOLUTIONS</p>
+                                <div class="back-description">
+                                    <p>Smart energy monitoring and optimization systems for industrial and commercial facilities.</p>
+                               
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2 class="results-title">Our Results</h2>
+                <p class="results-description">Tangible results, not empty claims — we build efficient AI & IoT tools that scale, optimize, and save valuable hours.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number" data-target="150">0</div>
+                    <div class="metric-title">Project Success</div>
+                    <div class="metric-description">Delivered across 20+ countries—from startups to top corporations.</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="100">0</div>
+                    <div class="metric-title">Client Efficiency</div>
+                    <div class="metric-description">Clients reporting enhanced efficiency with our custom AI & IoT strategies.</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="300">0</div>
+                    <div class="metric-title">AI Innovation</div>
+                    <div class="metric-description">Hours spent crafting smart AI & IoT tools to optimize workflows across key industries.</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="75">0</div>
+                    <div class="metric-title">Industry Recognition</div>
+                    <div class="metric-description">Recognized for design, tech, and sustainability —past five years.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Clients Section -->
+    <section class="our-clients-section">
+        <div class="clients-container">
+            <div class="clients-header">
+                <h2 class="clients-title">Our Clients</h2>
+                <p class="clients-tagline">Tangible results, not empty claims — we build efficient AI & IoT tools that scale, optimize, and save valuable hours.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant savings and better results.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👨‍💼</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Benjamin Daul</h4>
+                            <p class="client-title">HEAD OF ENGINEERING</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👩‍💼</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Jesse Leigh</h4>
+                            <p class="client-title">CEO & FOUNDER</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👨‍💻</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Michael Joseph</h4>
+                            <p class="client-title">HEAD OF CONTENT</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant better results for my work.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👩‍🎓</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Amy Louise</h4>
+                            <p class="client-title">CUSTOMER SUCCESS MANAGER</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👨‍💻</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Michael Joseph</h4>
+                            <p class="client-title">HEAD OF CONTENT</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant savings and better results.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👨‍💼</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Benjamin Daul</h4>
+                            <p class="client-title">HEAD OF ENGINEERING</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant better results for my work.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👩‍🎓</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Amy Louise</h4>
+                            <p class="client-title">CUSTOMER SUCCESS MANAGER</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">👩‍💼</div>
+                        <div class="client-details">
+                            <h4 class="client-name">Jesse Leigh</h4>
+                            <p class="client-title">CEO & FOUNDER</p>
+                        </div>
+                    </div>
+                    <div class="dismiss-icon">×</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section">
+        <div class="why-choose-container">
+            <h2 class="why-choose-title">Why Choose Us</h2>
+            <p class="why-choose-description">Skip the overhead, long hiring cycles, and hidden costs — get reliable, high-level AI & IoT talent exactly when your business needs it most.</p>
+            
+            <div class="comparison-box">
+                <div class="comparison-column">
+                    <h3 class="column-title">Other Agencies</h3>
+                    <ul class="comparison-list">
+                        <li class="comparison-item negative">
+                            <i class="fas fa-times"></i>
+                            <span>Manual or partially automated processes</span>
+                        </li>
+                        <li class="comparison-item negative">
+                            <i class="fas fa-times"></i>
+                            <span>One-size-fits-all approach</span>
+                        </li>
+                        <li class="comparison-item negative">
+                            <i class="fas fa-times"></i>
+                            <span>Long setup times and complex onboarding</span>
+                        </li>
+                        <li class="comparison-item negative">
+                            <i class="fas fa-times"></i>
+                            <span>Limited visibility into automation performance</span>
+                        </li>
+                        <li class="comparison-item negative">
+                            <i class="fas fa-times"></i>
+                            <span>Static systems that can't evolve with your needs</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-column">
+                    <h3 class="column-title">Working with Invexal</h3>
+                    <ul class="comparison-list">
+                        <li class="comparison-item positive">
+                            <i class="fas fa-check"></i>
+                            <span>Seamless AI & IoT-driven automation workflows</span>
+                        </li>
+                        <li class="comparison-item positive">
+                            <i class="fas fa-check"></i>
+                            <span>Custom-tailored solutions for any business size</span>
+                        </li>
+                        <li class="comparison-item positive">
+                            <i class="fas fa-check"></i>
+                            <span>Fast deployment with minimal overhead</span>
+                        </li>
+                        <li class="comparison-item positive">
+                            <i class="fas fa-check"></i>
+                            <span>Transparent performance tracking with real-time insights</span>
+                        </li>
+                        <li class="comparison-item positive">
+                            <i class="fas fa-check"></i>
+                            <span>Scalable infrastructure built for future growth</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-us-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="contact-title">Contact Us</h2>
+                <p class="contact-description">No delays, no vague replies — we respond within 24 hours to schedule your personalized discovery call.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info-column">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3 class="contact-card-title">Chat to sales</h3>
+                        <p class="contact-card-description">Contact our sales team.</p>
+                        <p class="contact-detail">marcom@invexal.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-card-title">Call Us</h3>
+                        <p class="contact-card-description">Get instant help.</p>
+                        <p class="contact-detail">+971 58 683 9220</p>
+                    </div>
+                    
+                  
+                </div>
+                
+                <div class="contact-form-column">
+                    <div class="contact-form-card">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter Your Email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">More Info</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Enter Your Message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="form-submit-btn">
+                                Send the message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="static/images/logo.png" alt="Invexal Logo" class="logo-image">
+                           
+                        </div>
+                        <p class="footer-description">Invexal is a premium AI & IoT solutions provider designed specifically for businesses seeking intelligent automation and smart connected systems.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="plans.html">Plans</a></li>
+                        <li><a href="client.html">Reviews</a></li>
+                        <li><a href="whyus.html">Why Us</a></li>
+                        <li><a href="#team">Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Legals</h4>
+                    <ul class="footer-links">
+                        <li><a href="#terms">Terms of service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#thankyou">Thank You</a></li>
+                        <li><a href="#404">404 Page</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>marcom@invexal.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+971 58 683 9220</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>8 The Green, STE A, Dover, Delaware 19901, US</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-background-text">INVEXAL</div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/971586839220" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
