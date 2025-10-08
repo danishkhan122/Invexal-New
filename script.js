@@ -389,6 +389,57 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Mobile menu toggle functionality
+function toggleMobileMenu() {
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const body = document.body;
+    
+    if (mobileNavOverlay.classList.contains('active')) {
+        // Close menu
+        mobileNavOverlay.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        body.style.overflow = 'auto';
+        
+        // Add closing animation
+        setTimeout(() => {
+            mobileNavOverlay.style.display = 'none';
+        }, 300);
+    } else {
+        // Open menu
+        mobileNavOverlay.style.display = 'flex';
+        body.style.overflow = 'hidden';
+        
+        // Trigger animation after display change
+        setTimeout(() => {
+            mobileNavOverlay.classList.add('active');
+            mobileMenuBtn.classList.add('active');
+        }, 10);
+    }
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileNavOverlay && mobileNavOverlay.classList.contains('active')) {
+        if (!mobileNavOverlay.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+            toggleMobileMenu();
+        }
+    }
+});
+
+// Close mobile menu on escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        if (mobileNavOverlay && mobileNavOverlay.classList.contains('active')) {
+            toggleMobileMenu();
+        }
+    }
+});
+
 // Smooth scroll to contact section
 function scrollToContact() {
     const contactSection = document.getElementById('contact');

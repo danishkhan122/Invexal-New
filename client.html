@@ -14,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="static/images/logo.png" alt="Invexal Logo" class="logo-image">
-                <span>Invexal</span>
+             
             </div>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
@@ -31,8 +31,92 @@
                 <i class="fas fa-arrow-right"></i>
                 Get in touch
             </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="static/images/logo.png" alt="Invexal Logo" class="mobile-nav-logo">
+                <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav-pages">
+                <a href="index.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span>Home</span>
+                </a>
+                
+                <a href="about.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <span>About</span>
+                </a>
+                
+                <a href="service.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <span>Services</span>
+                </a>
+                
+                <a href="results.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span>Results</span>
+                </a>
+                
+                <a href="plans.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <span>Plans</span>
+                </a>
+                
+                <a href="client.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <span>Clients</span>
+                </a>
+                
+                <a href="whyus.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>Why Us</span>
+                </a>
+                
+                <a href="faqs.html" class="mobile-nav-page">
+                    <div class="mobile-nav-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <span>FAQs</span>
+                </a>
+            </div>
+            
+            <div class="mobile-nav-footer">
+                <button class="mobile-cta-button" onclick="scrollToContact(); toggleMobileMenu();">
+                    <i class="fas fa-arrow-right"></i>
+                    Get in touch
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Clients Hero -->
     <section class="clients-hero">
@@ -164,7 +248,7 @@
                     <div class="footer-brand">
                         <div class="footer-logo">
                             <img src="static/images/logo.png" alt="Invexal Logo" class="logo-image">
-                            <span>Invexal</span>
+                           
                         </div>
                         <p class="footer-description">Invexal is a premium AI & IoT solutions provider designed specifically for businesses seeking intelligent automation and smart connected systems.</p>
                     </div>
