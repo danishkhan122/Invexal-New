@@ -400,6 +400,116 @@ function scrollToContact() {
     }
 }
 
+// Mobile Menu Functions
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileNav && menuBtn) {
+        mobileNav.classList.toggle('active');
+        menuBtn.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (mobileNav.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+}
+
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileNav && menuBtn) {
+        mobileNav.classList.remove('active');
+        menuBtn.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileNav && menuBtn && 
+        !mobileNav.contains(event.target) && 
+        !menuBtn.contains(event.target) && 
+        mobileNav.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
+
+// Close mobile menu on window resize (if resized to desktop)
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 1024) {
+        closeMobileMenu();
+    }
+});
+
+// Custom Cursor Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Only create custom cursor on desktop
+    if (window.innerWidth > 768) {
+        // Create cursor elements
+        const cursor = document.createElement('div');
+        const cursorFollower = document.createElement('div');
+        
+        cursor.className = 'cursor';
+        cursorFollower.className = 'cursor-follower';
+        
+        document.body.appendChild(cursor);
+        document.body.appendChild(cursorFollower);
+        
+        // Mouse move event
+        document.addEventListener('mousemove', function(e) {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            // Add slight delay to follower
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 50);
+        });
+        
+        // Hover effects
+        const hoverElements = document.querySelectorAll('a, button, .service-card, .team-card, .testimonial-card, .metric-card, .case-study-card, .pricing-card, .faq-item, .whatsapp-button, .cta-button, .btn-primary, .btn-secondary');
+        
+        hoverElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
+        
+        // Click effects
+        document.addEventListener('mousedown', () => {
+            cursor.classList.add('click');
+        });
+        
+        document.addEventListener('mouseup', () => {
+            cursor.classList.remove('click');
+        });
+        
+        // Hide cursor when leaving window
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorFollower.style.opacity = '0';
+        });
+        
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorFollower.style.opacity = '1';
+        });
+    }
+});
+
 // Add CSS for ripple effect
 const style = document.createElement('style');
 style.textContent = `
