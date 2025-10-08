@@ -2347,6 +2347,10 @@ body::after {
         display: none;
     }
     
+    .cta-button {
+        display: none;
+    }
+    
     .mobile-menu-btn {
         display: flex;
     }
