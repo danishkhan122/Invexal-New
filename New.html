@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invexal Team Leave Planner (Nov-Dec 2025)</title>
+    <!-- Load Tailwind CSS from CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for the Dashboard Look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+        }
+        .calendar-day {
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            cursor: default;
+            transition: all 0.1s ease;
+        }
+        /* Custom colors for Leave */
+        .leave-danish { background-color: #6366f1; color: white; } /* Indigo 500 */
+        .leave-osama { background-color: #10b981; color: white; }  /* Emerald 500 */
+        .leave-waqi { background-color: #f43f5e; color: white; }   /* Rose 500 */
+
+        /* Overlap Multi-color (Emerald + Rose) */
+        .leave-overlap {
+            background-image: linear-gradient(45deg, #10b981 50%, #f43f5e 50%); /* Emerald and Rose */
+            background-size: 100% 100%;
+            color: white;
+        }
+
+        /* Bar Chart Styling */
+        .bar {
+            transition: width 0.5s ease-out;
+            border-radius: 0.5rem;
+            height: 2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            padding-left: 0.75rem;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header --><header class="mb-8">
+            <h1 class="text-3xl font-extrabold text-gray-800">Invexal Team Leave Planner</h1>
+            <p class="text-xl text-gray-500 mt-1">November & December 2025 Overview</p>
+        </header>
+
+        <!-- Legend and Key Metrics --><div class="bg-white p-6 rounded-xl shadow-lg mb-8">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Leave Key & Summary</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="p-3 rounded-lg flex items-center bg-indigo-50">
+                    <span class="w-4 h-4 rounded-full leave-danish mr-3"></span>
+                    <span class="text-indigo-700 font-medium">Danish (Nov 1 - Nov 7)</span>
+                </div>
+                <div class="p-3 rounded-lg flex items-center bg-emerald-50">
+                    <span class="w-4 h-4 rounded-full leave-osama mr-3"></span>
+                    <span class="text-emerald-700 font-medium">Osama (Nov 8 - Nov 21)</span>
+                </div>
+                <div class="p-3 rounded-lg flex items-center bg-rose-50">
+                    <span class="w-4 h-4 rounded-full leave-waqi mr-3"></span>
+                    <span class="text-rose-700 font-medium">Waqi (Nov 15 - Dec 15)</span>
+                </div>
+                <!-- OVERLAP LEGEND ITEM --><div class="p-3 rounded-lg flex items-center" style="background-color: #eff6ff;"> <!-- Light blue for contrast --><span class="w-4 h-4 rounded-full leave-overlap mr-3 border border-gray-300"></span>
+                    <span class="text-gray-700 font-medium">Overlap (Osama & Waqi)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar View Container --><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- November 2025 Calendar --><div class="bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">November 2025</h2>
+                <div class="grid grid-cols-7 gap-1 text-center text-sm font-semibold text-gray-500 border-b pb-2 mb-1">
+                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span class="text-red-500">Sat</span><span class="text-red-500">Sun</span>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center">
+                    <!-- Blank cells for Oct 27-31 (Nov 1 is Saturday) --><div class="calendar-day text-gray-400">27</div>
+                    <div class="calendar-day text-gray-400">28</div>
+                    <div class="calendar-day text-gray-400">29</div>
+                    <div class="calendar-day text-gray-400">30</div>
+                    <div class="calendar-day text-gray-400">31</div>
+
+                    <!-- Danish (Nov 1 - 7) - Sat to Fri --><div class="calendar-day leave-danish rounded-lg">1</div>
+                    <div class="calendar-day leave-danish rounded-lg">2</div>
+                    <div class="calendar-day leave-danish rounded-lg">3</div>
+                    <div class="calendar-day leave-danish rounded-lg">4</div>
+                    <div class="calendar-day leave-danish rounded-lg">5</div>
+                    <div class="calendar-day leave-danish rounded-lg">6</div>
+                    <div class="calendar-day leave-danish rounded-lg">7</div>
+
+                    <!-- Osama Only (Nov 8 - 14) - Sat to Fri --><div class="calendar-day leave-osama rounded-lg">8</div>
+                    <div class="calendar-day leave-osama rounded-lg">9</div>
+                    <div class="calendar-day leave-osama rounded-lg">10</div>
+                    <div class="calendar-day leave-osama rounded-lg">11</div>
+                    <div class="calendar-day leave-osama rounded-lg">12</div>
+                    <div class="calendar-day leave-osama rounded-lg">13</div>
+                    <div class="calendar-day leave-osama rounded-lg">14</div>
+
+                    <!-- Overlap (Nov 15-21) --><div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">15</div>
+                    <div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">16</div>
+                    <div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">17</div>
+                    <div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">18</div>
+                    <div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">19</div>
+                    <div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">20</div>
+                    <div class="calendar-day leave-overlap rounded-lg" title="Osama & Waqi on Leave">21</div>
+
+                    <!-- Waqi Only (Nov 22 - 30) --><div class="calendar-day leave-waqi rounded-lg">22</div>
+                    <div class="calendar-day leave-waqi rounded-lg">23</div>
+                    <div class="calendar-day leave-waqi rounded-lg">24</div>
+                    <div class="calendar-day leave-waqi rounded-lg">25</div>
+                    <div class="calendar-day leave-waqi rounded-lg">26</div>
+                    <div class="calendar-day leave-waqi rounded-lg">27</div>
+                    <div class="calendar-day leave-waqi rounded-lg">28</div>
+                    <div class="calendar-day leave-waqi rounded-lg">29</div>
+                    <div class="calendar-day leave-waqi rounded-lg">30</div>
+                    <!-- End of November --></div>
+            </div>
+
+            <!-- December 2025 Calendar --><div class="bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">December 2025</h2>
+                <div class="grid grid-cols-7 gap-1 text-center text-sm font-semibold text-gray-500 border-b pb-2 mb-1">
+                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span class="text-red-500">Sat</span><span class="text-red-500">Sun</span>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center">
+                    <!-- Waqi (Dec 1 - 15) - Mon to Mon --><div class="calendar-day leave-waqi rounded-lg">1</div>
+                    <div class="calendar-day leave-waqi rounded-lg">2</div>
+                    <div class="calendar-day leave-waqi rounded-lg">3</div>
+                    <div class="calendar-day leave-waqi rounded-lg">4</div>
+                    <div class="calendar-day leave-waqi rounded-lg">5</div>
+                    <div class="calendar-day leave-waqi rounded-lg">6</div>
+                    <div class="calendar-day leave-waqi rounded-lg">7</div>
+                    <div class="calendar-day leave-waqi rounded-lg">8</div>
+                    <div class="calendar-day leave-waqi rounded-lg">9</div>
+                    <div class="calendar-day leave-waqi rounded-lg">10</div>
+                    <div class="calendar-day leave-waqi rounded-lg">11</div>
+                    <div class="calendar-day leave-waqi rounded-lg">12</div>
+                    <div class="calendar-day leave-waqi rounded-lg">13</div>
+                    <div class="calendar-day leave-waqi rounded-lg">14</div>
+                    <div class="calendar-day leave-waqi rounded-lg">15</div>
+
+                    <!-- Normal days (Dec 16 - 31) --><!-- Week 3: 16-21 --><div class="calendar-day bg-gray-100 rounded-lg">16</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">17</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">18</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">19</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">20</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">21</div>
+                    <!-- Week 4: 22-28 --><div class="calendar-day bg-gray-100 rounded-lg">22</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">23</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">24</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">25</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">26</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">27</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">28</div>
+                    <!-- Week 5: 29-31 --><div class="calendar-day bg-gray-100 rounded-lg">29</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">30</div>
+                    <div class="calendar-day bg-gray-100 rounded-lg">31</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Table & Bar Chart --><div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Details Table --><div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Detailed Leave Log</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Employee Name</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Start Date</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">End Date</th>
+                                <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Duration (Days)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Danish --><tr class="hover:bg-indigo-50/50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-700">Danish</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 1, 2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 7, 2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-bold text-indigo-600">7</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">One Week Leave</td>
+                            </tr>
+                            <!-- Osama --><tr class="hover:bg-emerald-50/50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-emerald-700">Osama</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 8, 2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 21, 2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-bold text-emerald-600">14</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Two Weeks (Post-Danish)</td>
+                            </tr>
+                            <!-- Waqi --><tr class="hover:bg-rose-50/50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-700">Waqi</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Nov 15, 2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Dec 15, 2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-bold text-rose-600">31</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Extended Leave (31 days) - Overlaps with Osama Nov 15-21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Summary Bar Chart --><div class="lg:col-span-1 bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Total Leave Days Summary</h2>
+                <p class="text-sm text-gray-500 mb-4">Total Leave Days per Person (Nov - Dec 2025)</p>
+                <!-- Max value is 31 days (Waqi) --><!-- Danish Bar (7 days / 31 max = 22.5%) --><div class="text-sm text-gray-700 mb-1 font-medium">Danish (7 days)</div>
+                <div class="bar bg-indigo-500" style="width: 22.5%;"></div>
+
+                <!-- Osama Bar (14 days / 31 max = 45.2%) --><div class="text-sm text-gray-700 mb-1 font-medium">Osama (14 days)</div>
+                <div class="bar bg-emerald-500" style="width: 45.2%;"></div>
+
+                <!-- Waqi Bar (31 days / 31 max = 100%) --><div class="text-sm text-gray-700 mb-1 font-medium">Waqi (31 days)</div>
+                <div class="bar bg-rose-500" style="width: 100%;"></div>
+
+                <p class="text-xs text-gray-400 mt-4">Note: Chart scales to the highest individual leave duration (Waqi: 31 days).</p>
+            </div>
+        </div>
+
+        <!-- Footer --><footer class="mt-8 pt-4 text-center text-gray-400 text-sm border-t">
+            HR Planning Tool: Data for Invexal Team (2025)
+        </footer>
+    </div>
+</body>
+</html>

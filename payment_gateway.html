@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Payment - Invexal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- PayPal SDK -->
+    <!-- IMPORTANT: Replace with your complete PayPal Client ID if the one below is truncated -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AfpJC8HudtxFAq7TQNOjA&currency=USD"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="static/images/logo.png" alt="Invexal Logo" class="logo-image">
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="service.html" class="nav-link">Services</a>
+                <a href="results.html" class="nav-link">Results</a>
+                <a href="plans.html" class="nav-link">Plans</a>
+                <a href="client.html" class="nav-link">Clients</a>
+                <a href="whyus.html" class="nav-link">Why Us</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="faqs.html" class="nav-link">FAQs</a>
+            </div>
+            <a href="index.html#contact" class="cta-button">
+                <i class="fas fa-arrow-right"></i>
+                Get in touch
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-content">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="service.html" class="mobile-nav-link">Services</a>
+                <a href="results.html" class="mobile-nav-link">Results</a>
+                <a href="plans.html" class="mobile-nav-link">Plans</a>
+                <a href="client.html" class="mobile-nav-link">Clients</a>
+                <a href="whyus.html" class="mobile-nav-link">Why Us</a>
+                <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+                <a href="faqs.html" class="mobile-nav-link">FAQs</a>
+                <a href="index.html#contact" class="mobile-nav-link cta" onclick="closeMobileMenu();">Get in touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="payment-container">
+            <div class="payment-header">
+                <div class="payment-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h1 class="payment-title">Service Payment</h1>
+                <p class="payment-subtitle">Secure payment processing via PayPal</p>
+            </div>
+
+            <div class="payment-content">
+                <!-- Payment Form -->
+                <div class="payment-form-wrapper">
+                    <form class="payment-form" id="paymentForm">
+                        <div class="form-group">
+                            <label for="customerName" class="form-label">
+                                <i class="fas fa-user"></i>
+                                Customer Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="customerName" 
+                                name="customerName" 
+                                class="form-input" 
+                                placeholder="Enter your full name" 
+                                required
+                                autocomplete="name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerEmail" class="form-label">
+                                <i class="fas fa-envelope"></i>
+                                Customer Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="customerEmail" 
+                                name="customerEmail" 
+                                class="form-input" 
+                                placeholder="Enter your email address" 
+                                required
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentAmount" class="form-label">
+                                <i class="fas fa-dollar-sign"></i>
+                                Payment Amount (USD)
+                            </label>
+                            <div class="amount-input-wrapper">
+                                <span class="currency-symbol">$</span>
+                                <input 
+                                    type="number" 
+                                    id="paymentAmount" 
+                                    name="paymentAmount" 
+                                    class="form-input amount-input" 
+                                    placeholder="0.00" 
+                                    min="0.01" 
+                                    step="0.01" 
+                                    required
+                                >
+                            </div>
+                            <small class="form-hint">Minimum amount: $0.01 USD</small>
+                        </div>
+
+                        <div class="payment-divider">
+                            <span>Secure Payment</span>
+                        </div>
+
+                        <!-- PayPal Smart Buttons Container -->
+                        <div id="paypal-button-container" class="paypal-container"></div>
+
+                        <div class="payment-security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Your payment is secured by PayPal. We never store your payment information.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Payment Summary Card -->
+                <div class="payment-summary">
+                    <h3 class="summary-title">Payment Summary</h3>
+                    <div class="summary-item">
+                        <span class="summary-label">Service:</span>
+                        <span class="summary-value">Invexal Services</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Payment Method:</span>
+                        <span class="summary-value">PayPal / Card</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Currency:</span>
+                        <span class="summary-value">USD ($)</span>
+                    </div>
+                    <div class="summary-total">
+                        <span class="total-label">Total Amount:</span>
+                        <span class="total-value" id="totalAmount">$0.00</span>
+                    </div>
+                    <div class="summary-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instant Processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Email Receipt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="payment-success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="success-title">Payment Successful!</h2>
+            <p class="success-message" id="successMessage"></p>
+            <div class="success-details" id="successDetails"></div>
+            <button class="success-button" onclick="closeSuccessModal()">
+                <i class="fas fa-check"></i>
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="static/images/logo.png" alt="Invexal Logo" class="logo-image">
+                        </div>
+                        <p class="footer-description">Invexal is a premium AI & IoT solutions provider designed specifically for businesses seeking intelligent automation and smart connected systems.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="plans.html">Plans</a></li>
+                        <li><a href="client.html">Reviews</a></li>
+                        <li><a href="whyus.html">Why Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Legals</h4>
+                    <ul class="footer-links">
+                        <li><a href="#terms">Terms of service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#thankyou">Thank You</a></li>
+                        <li><a href="#404">404 Page</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>marcom@invexal.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+971 58 683 9220</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>8 The Green, STE A, Dover, Delaware 19901, US</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-background-text">INVEXAL</div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/971586839220" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Update total amount display
+        const amountInput = document.getElementById('paymentAmount');
+        const totalAmountDisplay = document.getElementById('totalAmount');
+        
+        amountInput.addEventListener('input', function() {
+            const amount = parseFloat(this.value) || 0;
+            totalAmountDisplay.textContent = '$' + amount.toFixed(2);
+        });
+
+        // PayPal Smart Buttons Integration
+        let paypalButtons;
+        
+        function renderPayPalButtons() {
+            const amount = parseFloat(document.getElementById('paymentAmount').value) || 0;
+            
+            if (amount < 0.01) {
+                document.getElementById('paypal-button-container').innerHTML = 
+                    '<div class="paypal-error">Please enter a valid amount (minimum $0.01)</div>';
+                return;
+            }
+
+            // Clear previous buttons
+            document.getElementById('paypal-button-container').innerHTML = '';
+
+            paypal.Buttons({
+                style: {
+                    layout: 'vertical',
+                    color: 'blue',
+                    shape: 'rect',
+                    label: 'paypal'
+                },
+                createOrder: function(data, actions) {
+                    const customerName = document.getElementById('customerName').value;
+                    const customerEmail = document.getElementById('customerEmail').value;
+                    const amount = parseFloat(document.getElementById('paymentAmount').value);
+
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: amount.toFixed(2),
+                                currency_code: 'USD'
+                            },
+                            description: 'Service Payment - Invexal',
+                            custom_id: customerEmail
+                        }],
+                        application_context: {
+                            brand_name: 'Invexal',
+                            landing_page: 'BILLING',
+                            user_action: 'PAY_NOW',
+                            return_url: window.location.href,
+                            cancel_url: window.location.href
+                        }
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        // Payment successful
+                        const payerName = details.payer.name.given_name + ' ' + details.payer.name.surname;
+                        const payerEmail = details.payer.email_address;
+                        const amount = details.purchase_units[0].amount.value;
+                        const transactionId = details.id;
+
+                        showSuccessModal(payerName, payerEmail, amount, transactionId);
+                        
+                        // Reset form
+                        document.getElementById('paymentForm').reset();
+                        totalAmountDisplay.textContent = '$0.00';
+                        document.getElementById('paypal-button-container').innerHTML = '';
+                    });
+                },
+                onError: function(err) {
+                    console.error('PayPal Error:', err);
+                    alert('An error occurred during payment processing. Please try again.');
+                },
+                onCancel: function(data) {
+                    console.log('Payment cancelled:', data);
+                }
+            }).render('#paypal-button-container');
+        }
+
+        // Render buttons when amount is entered
+        amountInput.addEventListener('blur', function() {
+            const amount = parseFloat(this.value);
+            if (amount >= 0.01) {
+                renderPayPalButtons();
+            }
+        });
+
+        // Also render on form validation
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const amount = parseFloat(amountInput.value);
+            if (amount >= 0.01) {
+                renderPayPalButtons();
+            } else {
+                alert('Please enter a valid amount (minimum $0.01)');
+            }
+        });
+
+        // Show success modal
+        function showSuccessModal(name, email, amount, transactionId) {
+            const modal = document.getElementById('successModal');
+            const message = document.getElementById('successMessage');
+            const details = document.getElementById('successDetails');
+            
+            message.textContent = `Thank you, ${name}! Your payment has been processed successfully.`;
+            
+            details.innerHTML = `
+                <div class="detail-row">
+                    <span class="detail-label">Amount Paid:</span>
+                    <span class="detail-value">$${parseFloat(amount).toFixed(2)} USD</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Transaction ID:</span>
+                    <span class="detail-value">${transactionId}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Email:</span>
+                    <span class="detail-value">${email}</span>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        // Close success modal
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal on outside click
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessModal();
+            }
+        });
+    </script>
+</body>
+</html>
+

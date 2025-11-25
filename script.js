@@ -449,6 +449,42 @@ window.addEventListener('resize', function() {
     }
 });
 
+// Scroll Animation Functionality
+function initScrollAnimations() {
+    // Create intersection observer for scroll animations
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Add delay based on data-delay attribute
+                const delay = element.getAttribute('data-delay') || 0;
+                
+                setTimeout(() => {
+                    element.classList.add('animate');
+                }, delay);
+                
+                // Unobserve after animation to prevent re-triggering
+                scrollObserver.unobserve(element);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe all scroll animation elements
+    const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-card');
+    scrollElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
+}
+
+// Initialize scroll animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollAnimations();
+});
+
 // Custom Cursor Functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Only create custom cursor on desktop
