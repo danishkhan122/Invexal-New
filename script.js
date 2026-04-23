@@ -104,44 +104,29 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Testimonial card animations
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    
-    testimonialCards.forEach((card, index) => {
-        // Add alternating slide directions
-        if (index % 2 === 0) {
-            card.classList.add('slide-in-left');
-        } else {
-            card.classList.add('slide-in-right');
+    // Testimonials carousel - ensure smooth infinite scrolling
+    const testimonialsCarousel = document.querySelector('.testimonials-carousel');
+    if (testimonialsCarousel) {
+        // Pause animation on hover for better UX
+        const carouselWrapper = document.querySelector('.testimonials-carousel-wrapper');
+        if (carouselWrapper) {
+            carouselWrapper.addEventListener('mouseenter', () => {
+                testimonialsCarousel.style.animationPlayState = 'paused';
+            });
+            
+            carouselWrapper.addEventListener('mouseleave', () => {
+                testimonialsCarousel.style.animationPlayState = 'running';
+            });
         }
         
-        // Animate cards on scroll
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('animate-in');
-                    }, index * 100); // Stagger animation
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        cardObserver.observe(card);
-    });
-
-    // Dismiss functionality for testimonial cards
-    const dismissIcons = document.querySelectorAll('.dismiss-icon');
-    
-    dismissIcons.forEach(icon => {
-        icon.addEventListener('click', function() {
-            const card = this.closest('.testimonial-card');
-            card.style.transform = 'translateX(-100%)';
-            card.style.opacity = '0';
-            setTimeout(() => {
-                card.style.display = 'none';
-            }, 300);
+        // Ensure cards are visible (remove old animation classes)
+        const testimonialCards = testimonialsCarousel.querySelectorAll('.testimonial-card');
+        testimonialCards.forEach(card => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateX(0)';
+            card.classList.remove('slide-in-left', 'slide-in-right', 'animate-in');
         });
-    });
+    }
 
     // Contact form submission
     const contactForm = document.querySelector('.contact-form');
@@ -186,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animated numbers functionality
     function animateNumbers() {
-        const numberElements = document.querySelectorAll('.metric-number[data-target]');
+        const numberElements = document.querySelectorAll('.metric-number[data-target], .demographic-number[data-target]');
         
         numberElements.forEach((element, index) => {
             const target = parseInt(element.getAttribute('data-target'));
@@ -210,8 +195,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         }, 200);
                     }
                     
-                    // Add + or % based on the target
-                    if (target === 100) {
+                    // Add + or % based on the target and element type
+                    if (element.classList.contains('demographic-number')) {
+                        // Demographic numbers don't need + or %
+                        element.textContent = Math.floor(current);
+                    } else if (target === 100) {
                         element.textContent = Math.floor(current) + '%';
                     } else {
                         element.textContent = Math.floor(current) + '+';
@@ -234,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe the results section
     const resultsSection = document.querySelector('.results-section');
     const keyMetricsSection = document.querySelector('.key-metrics-section');
+    const globalReachSection = document.querySelector('.global-reach-section');
     
     if (resultsSection) {
         numbersObserver.observe(resultsSection);
@@ -241,6 +230,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (keyMetricsSection) {
         numbersObserver.observe(keyMetricsSection);
+    }
+    
+    if (globalReachSection) {
+        numbersObserver.observe(globalReachSection);
     }
 
     // FAQ functionality
@@ -483,7 +476,14 @@ function initScrollAnimations() {
 // Initialize scroll animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
+    initFeatureSectionAnimations();
 });
+
+// Feature Section Scroll Animations - No longer needed as we use CSS animations
+function initFeatureSectionAnimations() {
+    // Carousel animations are handled by CSS, no JavaScript needed
+    // This function is kept for compatibility but does nothing
+}
 
 // Custom Cursor Functionality
 document.addEventListener('DOMContentLoaded', function() {

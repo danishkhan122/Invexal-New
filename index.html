@@ -6,7 +6,7 @@
     <title>Invexal - AI & IoT Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -20,7 +20,6 @@
                 <a href="service.html" class="nav-link">Services</a>
                 <a href="results.html" class="nav-link">Results</a>
                 <a href="plans.html" class="nav-link">Plans</a>
-                <a href="client.html" class="nav-link">Clients</a>
                 <a href="whyus.html" class="nav-link">Why Us</a>
                 <a href="portfolio.html" class="nav-link">Portfolio</a>
                 <a href="faqs.html" class="nav-link">FAQs</a>
@@ -46,7 +45,6 @@
                 <a href="service.html" class="mobile-nav-link">Services</a>
                 <a href="results.html" class="mobile-nav-link">Results</a>
                 <a href="plans.html" class="mobile-nav-link">Plans</a>
-                <a href="client.html" class="mobile-nav-link">Clients</a>
                 <a href="whyus.html" class="mobile-nav-link">Why Us</a>
                 <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
                 <a href="faqs.html" class="mobile-nav-link">FAQs</a>
@@ -54,7 +52,10 @@
             </div>
         </div>
     </nav>
-
+<br>
+<br>
+<br>
+<br>
     <!-- Hero Section -->
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
@@ -233,16 +234,73 @@
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="trust-container">
-            <p class="trust-text">TRUSTED BY 100+ COMPANIES WORLDWIDE:</p>
-            <div class="company-logos">
-                <div class="logo">LII</div>
-                <div class="logo">IPSUM</div>
-                <div class="logo">LOCO</div>
-                <div class="logo">LII</div>
-                <div class="logo">IPS</div>
+    <!-- Global Reach Section -->
+    <section class="global-reach-section">
+        <div class="global-reach-container">
+            <div class="global-reach-header">
+                <h2 class="global-reach-title">Global Presence & Impact</h2>
+                <p class="global-reach-description">Empowering businesses worldwide with cutting-edge AI & IoT solutions across diverse industries and regions.</p>
+            </div>
+            
+            <div class="demographics-grid">
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="demographic-number" data-target="25">0</div>
+                    <div class="demographic-label">Countries Served</div>
+                    <div class="demographic-description">Active presence across 5 continents</div>
+                </div>
+                
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="demographic-number" data-target="500">0</div>
+                    <div class="demographic-label">Companies Empowered</div>
+                    <div class="demographic-description">From startups to Fortune 500</div>
+                </div>
+                
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="demographic-number" data-target="15">0</div>
+                    <div class="demographic-label">Industries Served</div>
+                    <div class="demographic-description">Manufacturing, Healthcare, Logistics & more</div>
+                </div>
+                
+                <div class="demographic-card">
+                    <div class="demographic-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="demographic-number" data-target="50">0</div>
+                    <div class="demographic-label">Expert Team Members</div>
+                    <div class="demographic-description">AI & IoT specialists worldwide</div>
+                </div>
+            </div>
+            
+            <div class="region-map">
+                <div class="region-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>North America</span>
+                    <span class="region-count">45%</span>
+                </div>
+                <div class="region-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Europe</span>
+                    <span class="region-count">30%</span>
+                </div>
+                <div class="region-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Asia Pacific</span>
+                    <span class="region-count">20%</span>
+                </div>
+                <div class="region-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Middle East & Africa</span>
+                    <span class="region-count">5%</span>
+                </div>
             </div>
         </div>
     </section>
@@ -254,41 +312,95 @@
                 <h2 class="team-title">Our Feature </h2>
                 <p class="team-description">Skilled experts, not generic teams — we craft tailored AI & IoT systems that drive success and lasting impact.</p>
             </div>
+            </div>
             
-            <div class="team-grid">
+        <div class="team-carousel-container">
+                <!-- Top Row: Scrolls left to right -->
+                <div class="team-carousel-wrapper top-carousel-wrapper">
+                    <div class="team-carousel top-carousel">
+                        <!-- Card 1: Smart Surveillance Monitoring -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/cold.jpg" alt="Lucas Harris" class="team-photo">
+                                        <img src="static/images/2.jpg" alt="Smart Surveillance Monitoring" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Cold Chain Monitoring</h3>
-                                    <p class="team-role">IOT Solutions</p>
+                                            <h3 class="team-name">Smart Surveillance Monitoring</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name">Cold Chain</h3>
-                                <p class="back-role">IOT Solutions</p>
+                                        <h3 class="back-name">Smart Surveillance</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>We develop advanced IoT solutions that can monitor and control the temperature of the cold chain.</p>
-                                 
+                                            <p>AI-powered surveillance systems that detect threats, monitor behavior, and enhance real-time security across facilities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: Automated Quality Control -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/6.png" alt="Automated Quality Control" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Automated Quality Control</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Quality Control</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Computer vision systems that inspect products on production lines, detecting defects with speed and precision.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                              
+                        <!-- Card 3: Conveyor Belt Object Counting -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/coc.png" alt="Conveyor Belt Object Counting" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Conveyor Belt Object Counting</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Object Counting</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Real-time object detection and counting on conveyor belts to improve production accuracy and operational efficiency.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Card 4: PPE Compliance Monitoring -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/coc.png" alt="Peter Johnson" class="team-photo">
+                                        <img src="static/images/HELMET.jpg" alt="PPE Compliance Monitoring" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Conveyor Belt Monitoring</h3>
+                                            <h3 class="team-name">PPE Compliance Monitoring</h3>
                                     <p class="team-role">AI SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
@@ -296,25 +408,74 @@
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name">Conveyor Belt</h3>
+                                        <h3 class="back-name">PPE Compliance</h3>
                                 <p class="back-role">AI SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>We develop advanced computer vision systems that can see, analyze, and make intelligent decisions from visual data.</p>
-                                  
+                                            <p>AI systems that ensure workers wear required safety gear, improving workplace safety and regulatory compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 5: Employee Attendance Recognition -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/1.jpg" alt="Employee Attendance Recognition" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Employee Attendance Recognition</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Attendance Recognition</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Facial recognition-based attendance systems that automate employee check-ins and workforce management.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                              
+                        <!-- Card 6: Vehicle & License Plate Recognition -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/8.jpg" alt="Vehicle & License Plate Recognition" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Vehicle & License Plate Recognition</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Vehicle Recognition</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>AI-powered vehicle detection and number plate recognition for secure access control and traffic monitoring.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Card 7: Retail Footfall & Behavior Analysis -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/HELMET.jpg" alt="Daniel Lee" class="team-photo">
+                                        <img src="static/images/The.jpg" alt="Retail Footfall & Behavior Analysis" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Real Time PPE Monitoring</h3>
+                                            <h3 class="team-name">Retail Footfall & Behavior Analysis</h3>
                                     <p class="team-role">AI SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
@@ -322,25 +483,255 @@
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name"> Real Time PPE</h3>
+                                        <h3 class="back-name">Retail Analytics</h3>
                                 <p class="back-role">AI SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>We develop advanced computer vision systems that can see, analyze, and make intelligent decisions from visual data.</p>
-                                  
+                                            <p>Video analytics that track customer movement, dwell time, and behavior to optimize store performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 8: Sports Performance Video Analysis -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/7.jpg" alt="Sports Performance Video Analysis" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Sports Performance Video Analysis</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Sports Analytics</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>AI-driven motion tracking and performance analysis for athletes, coaches, and sports organizations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                                
+                        <!-- Duplicate all 8 cards for seamless infinite loop -->
+                        <!-- Card 1: Smart Surveillance Monitoring (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/2.jpg" alt="Smart Surveillance Monitoring" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Surveillance Monitoring</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Smart Surveillance</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>AI-powered surveillance systems that detect threats, monitor behavior, and enhance real-time security across facilities.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Card 2: Automated Quality Control (Duplicate) -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/16.jpg" alt="Sofia Martin" class="team-photo">
+                                        <img src="static/images/6.png" alt="Automated Quality Control" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Bike Monitoring</h3>
+                                            <h3 class="team-name">Automated Quality Control</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Quality Control</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Computer vision systems that inspect products on production lines, detecting defects with speed and precision.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3: Conveyor Belt Object Counting (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/coc.png" alt="Conveyor Belt Object Counting" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Conveyor Belt Object Counting</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Object Counting</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Real-time object detection and counting on conveyor belts to improve production accuracy and operational efficiency.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4: PPE Compliance Monitoring (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/HELMET.jpg" alt="PPE Compliance Monitoring" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">PPE Compliance Monitoring</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">PPE Compliance</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>AI systems that ensure workers wear required safety gear, improving workplace safety and regulatory compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 5: Employee Attendance Recognition (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/1.jpg" alt="Employee Attendance Recognition" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Employee Attendance Recognition</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Attendance Recognition</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Facial recognition-based attendance systems that automate employee check-ins and workforce management.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 6: Vehicle & License Plate Recognition (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/8.jpg" alt="Vehicle & License Plate Recognition" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Vehicle & License Plate Recognition</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Vehicle Recognition</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>AI-powered vehicle detection and number plate recognition for secure access control and traffic monitoring.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 7: Retail Footfall & Behavior Analysis (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/The.jpg" alt="Retail Footfall & Behavior Analysis" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Retail Footfall & Behavior Analysis</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Retail Analytics</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Video analytics that track customer movement, dwell time, and behavior to optimize store performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 8: Sports Performance Video Analysis (Duplicate) -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/7.jpg" alt="Sports Performance Video Analysis" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Sports Performance Video Analysis</h3>
+                                            <p class="team-role">AI SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Sports Analytics</h3>
+                                        <p class="back-role">AI SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>AI-driven motion tracking and performance analysis for athletes, coaches, and sports organizations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Row: Scrolls right to left -->
+                <div class="team-carousel-wrapper bottom-carousel-wrapper">
+                    <div class="team-carousel bottom-carousel">
+                        <!-- Card 1: Cold Chain Temperature Monitoring -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/cold.jpg" alt="Cold Chain Temperature Monitoring" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Cold Chain Temperature Monitoring</h3>
                                     <p class="team-role">IOT SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
@@ -348,25 +739,49 @@
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name">Bike Monitoring</h3>
+                                        <h3 class="back-name">Cold Chain Monitoring</h3>
                                 <p class="back-role">IOT SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>We develop advanced IoT solutions that can monitor and control the temperature of the cold chain.</p>
-                                   
+                                            <p>IoT sensors that monitor and control temperature-sensitive goods throughout the entire supply chain.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                                
+                        <!-- Card 2: Smart Asset Tracking Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/10.jpg" alt="Smart Asset Tracking Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Asset Tracking Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Asset Tracking</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Real-time tracking of equipment and assets using GPS and IoT devices to prevent loss and improve utilization.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Card 3: Industrial Equipment Health Monitoring -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/cold.jpg" alt="Smart Agriculture" class="team-photo">
+                                        <img src="static/images/9.jpg" alt="Industrial Equipment Health Monitoring" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Smart Agriculture</h3>
+                                            <h3 class="team-name">Industrial Equipment Health Monitoring</h3>
                                     <p class="team-role">IOT SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
@@ -374,77 +789,225 @@
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name">Smart Agriculture</h3>
+                                        <h3 class="back-name">Equipment Health</h3>
                                 <p class="back-role">IOT SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>Advanced IoT sensors for soil monitoring, crop health, and automated irrigation systems.</p>
-                              
+                                            <p>IoT-based predictive maintenance systems that monitor machine health and prevent costly downtime.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4: Smart Energy Consumption Management -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/11.jpg" alt="Smart Energy Consumption Management" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Energy Consumption Management</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Energy Management</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>IoT solutions that track and optimize energy usage, reducing operational costs and improving sustainability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                              
+                        <!-- Card 5: Fleet & Vehicle Telematics Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/16.jpg" alt="Fleet & Vehicle Telematics Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Fleet & Vehicle Telematics Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Fleet Telematics</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Connected vehicle systems that monitor location, fuel usage, driver behavior, and route performance.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Card 6: Smart Inventory Management Systems -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/coc.png" alt="Quality Control" class="team-photo">
+                                        <img src="static/images/3.jpg" alt="Smart Inventory Management Systems" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Quality Control</h3>
-                                    <p class="team-role">AI COMPUTER VISION</p>
+                                            <h3 class="team-name">Smart Inventory Management Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name">Quality Control</h3>
-                                <p class="back-role">AI COMPUTER VISION</p>
+                                        <h3 class="back-name">Inventory Management</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>Real-time defect detection and quality assurance using advanced computer vision algorithms.</p>
-                                  
+                                            <p>IoT-enabled inventory tracking that automates stock monitoring and improves warehouse efficiency.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 7: Environmental Condition Monitoring -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/4.jpg" alt="Environmental Condition Monitoring" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Environmental Condition Monitoring</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Environmental Monitoring</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>IoT sensors that monitor air quality, humidity, pressure, and environmental conditions in real time.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                              
+                        <!-- Card 8: Smart Building Automation Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/12.jpg" alt="Smart Building Automation Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Building Automation Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Building Automation</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Connected building systems that automate lighting, HVAC, access control, and facility management.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Duplicate cards for seamless infinite loop -->
+                        <!-- Card 1: Cold Chain Temperature Monitoring -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/HELMET.jpg" alt="Smart Security" class="team-photo">
+                                        <img src="static/images/cold.jpg" alt="Cold Chain Temperature Monitoring" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Smart Security</h3>
-                                    <p class="team-role">AI & IOT SOLUTIONS</p>
+                                            <h3 class="team-name">Cold Chain Temperature Monitoring</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="back-content">
-                                <h3 class="back-name">Smart Security</h3>
-                                <p class="back-role">AI & IOT SOLUTIONS</p>
+                                        <h3 class="back-name">Cold Chain Monitoring</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>Intelligent surveillance systems with facial recognition and automated threat detection.</p>
-                                   
+                                            <p>IoT sensors that monitor and control temperature-sensitive goods throughout the entire supply chain.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: Smart Asset Tracking Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/10.jpg" alt="Smart Asset Tracking Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Asset Tracking Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Asset Tracking</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Real-time tracking of equipment and assets using GPS and IoT devices to prevent loss and improve utilization.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                             
+                        <!-- Card 3: Industrial Equipment Health Monitoring -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/9.jpg" alt="Industrial Equipment Health Monitoring" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Industrial Equipment Health Monitoring</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Equipment Health</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>IoT-based predictive maintenance systems that monitor machine health and prevent costly downtime.</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                        <!-- Card 4: Smart Energy Consumption Management -->
                 <div class="team-card" onclick="flipCard(this)">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="team-image">
-                                <img src="static/images/16.jpg" alt="Energy Management" class="team-photo">
+                                        <img src="static/images/11.jpg" alt="Smart Energy Consumption Management" class="team-photo">
                                 <div class="team-overlay">
-                                    <h3 class="team-name">Energy Management</h3>
+                                            <h3 class="team-name">Smart Energy Consumption Management</h3>
                                     <p class="team-role">IOT SOLUTIONS</p>
                                     <div class="team-plus">+</div>
                                 </div>
@@ -455,10 +1018,109 @@
                                 <h3 class="back-name">Energy Management</h3>
                                 <p class="back-role">IOT SOLUTIONS</p>
                                 <div class="back-description">
-                                    <p>Smart energy monitoring and optimization systems for industrial and commercial facilities.</p>
-                               
+                                            <p>IoT solutions that track and optimize energy usage, reducing operational costs and improving sustainability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 5: Fleet & Vehicle Telematics Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/16.jpg" alt="Fleet & Vehicle Telematics Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Fleet & Vehicle Telematics Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Fleet Telematics</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Connected vehicle systems that monitor location, fuel usage, driver behavior, and route performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                             
+                        <!-- Card 6: Smart Inventory Management Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/3.jpg" alt="Smart Inventory Management Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Inventory Management Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Inventory Management</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>IoT-enabled inventory tracking that automates stock monitoring and improves warehouse efficiency.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 7: Environmental Condition Monitoring -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/4.jpg" alt="Environmental Condition Monitoring" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Environmental Condition Monitoring</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Environmental Monitoring</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>IoT sensors that monitor air quality, humidity, pressure, and environmental conditions in real time.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 8: Smart Building Automation Systems -->
+                        <div class="team-card" onclick="flipCard(this)">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="team-image">
+                                        <img src="static/images/12.jpg" alt="Smart Building Automation Systems" class="team-photo">
+                                        <div class="team-overlay">
+                                            <h3 class="team-name">Smart Building Automation Systems</h3>
+                                            <p class="team-role">IOT SOLUTIONS</p>
+                                            <div class="team-plus">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h3 class="back-name">Building Automation</h3>
+                                        <p class="back-role">IOT SOLUTIONS</p>
+                                        <div class="back-description">
+                                            <p>Connected building systems that automate lighting, HVAC, access control, and facility management.</p>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -499,6 +1161,78 @@
         </div>
     </section>
 
+    <!-- Technology Stack Section -->
+    <section class="tech-stack-section">
+        <div class="tech-stack-container">
+            <div class="tech-stack-header">
+                <h2 class="tech-stack-title">Our Technology Stack</h2>
+                <p class="tech-stack-description">Built with cutting-edge technologies and frameworks to deliver robust, scalable, and innovative solutions.</p>
+            </div>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i>
+                        AI & Machine Learning
+                    </h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">YOLO</span>
+                        <span class="tech-tag">GPT Models</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-network-wired"></i>
+                        IoT & Connectivity
+                    </h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">LoRaWAN</span>
+                        <span class="tech-tag">AWS IoT</span>
+                        <span class="tech-tag">Azure IoT</span>
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">Arduino</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        Cloud & Infrastructure
+                    </h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Microservices</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Development & Tools
+                    </h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Our Clients Section -->
     <section class="our-clients-section">
         <div class="clients-container">
@@ -506,110 +1240,317 @@
                 <h2 class="clients-title">Our Clients</h2>
                 <p class="clients-tagline">Tangible results, not empty claims — we build efficient AI & IoT tools that scale, optimize, and save valuable hours.</p>
             </div>
+            </div>
             
-            <div class="testimonials-grid">
+        <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-carousel">
+                    <!-- Testimonial 1: Maliban Biscuit Manufacturers -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant savings and better results.</p>
+                        <p class="testimonial-text">We required enterprise-grade security at the executive level, and Invexal delivered an exceptional Video Analytics solution that exceeded our expectations. Their professionalism, precision, and commitment to security made a real impact on our operations. We are extremely satisfied with the results.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👨‍💼</div>
+                            <div class="client-avatar">🏭</div>
                         <div class="client-details">
-                            <h4 class="client-name">Benjamin Daul</h4>
-                            <p class="client-title">HEAD OF ENGINEERING</p>
+                                <h4 class="client-name">Maliban Biscuit Manufacturers</h4>
+                                <p class="client-title">C-SUITE SECURITY SOLUTION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 2: Silver Mill Coconut -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                        <p class="testimonial-text">Invexal helped us automate coconut counting, truck monitoring, and number plate recognition through advanced Video Analytics. Their solution significantly improved operational efficiency and accuracy. A highly reliable technology partner.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👩‍💼</div>
+                            <div class="client-avatar">🥥</div>
                         <div class="client-details">
-                            <h4 class="client-name">Jesse Leigh</h4>
-                            <p class="client-title">CEO & FOUNDER</p>
+                                <h4 class="client-name">Silver Mill Coconut</h4>
+                                <p class="client-title">SRI LANKA - OPERATIONS AUTOMATION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 3: Dubai Dates Factories -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                        <p class="testimonial-text">Our goal was to improve employee productivity and operational efficiency across multiple factories. Invexal implemented a smart Video Analytics system that delivered measurable improvements. We are very pleased with their work and results.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👨‍💻</div>
+                            <div class="client-avatar">🌴</div>
                         <div class="client-details">
-                            <h4 class="client-name">Michael Joseph</h4>
-                            <p class="client-title">HEAD OF CONTENT</p>
+                                <h4 class="client-name">Dates Manufacturing Group</h4>
+                                <p class="client-title">DUBAI - EFFICIENCY OPTIMIZATION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 4: Medical AI Project -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant better results for my work.</p>
+                        <p class="testimonial-text">Invexal developed an AI-based kidney disease prediction model that demonstrated high accuracy and clinical relevance. Their expertise in healthcare AI and data science made them a trusted partner in medical innovation.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👩‍🎓</div>
+                            <div class="client-avatar">🏥</div>
                         <div class="client-details">
-                            <h4 class="client-name">Amy Louise</h4>
-                            <p class="client-title">CUSTOMER SUCCESS MANAGER</p>
+                                <h4 class="client-name">Healthcare Research Partner</h4>
+                                <p class="client-title">MEDICAL AI - KIDNEY DISEASE PREDICTION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 5: Infinitee (Amazon Partner) -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                        <p class="testimonial-text">We needed a machine learning model capable of generating accurate 90-day business forecasts. Invexal delivered a robust and reliable predictive system that greatly improved our planning and decision-making. Outstanding technical execution.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👨‍💻</div>
+                            <div class="client-avatar">📊</div>
                         <div class="client-details">
-                            <h4 class="client-name">Michael Joseph</h4>
-                            <p class="client-title">HEAD OF CONTENT</p>
+                                <h4 class="client-name">Infinitee</h4>
+                                <p class="client-title">AMAZON PARTNER - BUSINESS FORECASTING</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 6: Pickleball Video Analytics -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant savings and better results.</p>
+                        <p class="testimonial-text">Invexal created a Video Analytics solution for pickleball performance tracking and match analysis. The accuracy and insights provided by their system have significantly enhanced our sports analytics capabilities. Highly recommended.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👨‍💼</div>
+                            <div class="client-avatar">🎾</div>
                         <div class="client-details">
-                            <h4 class="client-name">Benjamin Daul</h4>
-                            <p class="client-title">HEAD OF ENGINEERING</p>
+                                <h4 class="client-name">Sports Technology Client</h4>
+                                <p class="client-title">USA - SPORTS ANALYTICS SOLUTION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 7: Industrial Manufacturing -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">Thanks to their team, our internal processes were optimized, resulting in significant better results for my work.</p>
+                        <p class="testimonial-text">Invexal implemented an automated quality control system using computer vision, enabling real-time defect detection on our production line. This reduced manual inspection costs and improved overall product quality.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👩‍🎓</div>
+                            <div class="client-avatar">⚙️</div>
                         <div class="client-details">
-                            <h4 class="client-name">Amy Louise</h4>
-                            <p class="client-title">CUSTOMER SUCCESS MANAGER</p>
+                                <h4 class="client-name">Industrial Manufacturing Client</h4>
+                                <p class="client-title">QUALITY CONTROL AUTOMATION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
                 </div>
 
+                    <!-- Testimonial 8: Logistics & Fleet Monitoring -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <p class="testimonial-text">The best investment solution for our business! AI & IoT technologies not only save time, but also increase efficiency.</p>
+                        <p class="testimonial-text">We partnered with Invexal to deploy a fleet monitoring and vehicle recognition system. Their solution improved security, tracking accuracy, and operational transparency across our logistics network.</p>
                     <div class="client-info">
-                        <div class="client-avatar">👩‍💼</div>
+                            <div class="client-avatar">🚚</div>
                         <div class="client-details">
-                            <h4 class="client-name">Jesse Leigh</h4>
-                            <p class="client-title">CEO & FOUNDER</p>
+                                <h4 class="client-name">Logistics & Transportation Client</h4>
+                                <p class="client-title">FLEET MONITORING & RECOGNITION</p>
                         </div>
                     </div>
                     <div class="dismiss-icon">×</div>
+                    </div>
+                    
+                    <!-- Duplicate cards for seamless infinite loop -->
+                    <!-- Testimonial 1: Maliban Biscuit Manufacturers -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">We required enterprise-grade security at the executive level, and Invexal delivered an exceptional Video Analytics solution that exceeded our expectations. Their professionalism, precision, and commitment to security made a real impact on our operations. We are extremely satisfied with the results.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">🏭</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Maliban Biscuit Manufacturers</h4>
+                                <p class="client-title">C-SUITE SECURITY SOLUTION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 2: Silver Mill Coconut -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Invexal helped us automate coconut counting, truck monitoring, and number plate recognition through advanced Video Analytics. Their solution significantly improved operational efficiency and accuracy. A highly reliable technology partner.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">🥥</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Silver Mill Coconut</h4>
+                                <p class="client-title">SRI LANKA - OPERATIONS AUTOMATION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 3: Dubai Dates Factories -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Our goal was to improve employee productivity and operational efficiency across multiple factories. Invexal implemented a smart Video Analytics system that delivered measurable improvements. We are very pleased with their work and results.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">🌴</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Dates Manufacturing Group</h4>
+                                <p class="client-title">DUBAI - EFFICIENCY OPTIMIZATION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 4: Medical AI Project -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Invexal developed an AI-based kidney disease prediction model that demonstrated high accuracy and clinical relevance. Their expertise in healthcare AI and data science made them a trusted partner in medical innovation.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">🏥</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Healthcare Research Partner</h4>
+                                <p class="client-title">MEDICAL AI - KIDNEY DISEASE PREDICTION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 5: Infinitee (Amazon Partner) -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">We needed a machine learning model capable of generating accurate 90-day business forecasts. Invexal delivered a robust and reliable predictive system that greatly improved our planning and decision-making. Outstanding technical execution.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">📊</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Infinitee</h4>
+                                <p class="client-title">AMAZON PARTNER - BUSINESS FORECASTING</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 6: Pickleball Video Analytics -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Invexal created a Video Analytics solution for pickleball performance tracking and match analysis. The accuracy and insights provided by their system have significantly enhanced our sports analytics capabilities. Highly recommended.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">🎾</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Sports Technology Client</h4>
+                                <p class="client-title">USA - SPORTS ANALYTICS SOLUTION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 7: Industrial Manufacturing -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Invexal implemented an automated quality control system using computer vision, enabling real-time defect detection on our production line. This reduced manual inspection costs and improved overall product quality.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">⚙️</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Industrial Manufacturing Client</h4>
+                                <p class="client-title">QUALITY CONTROL AUTOMATION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+
+                    <!-- Testimonial 8: Logistics & Fleet Monitoring -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">We partnered with Invexal to deploy a fleet monitoring and vehicle recognition system. Their solution improved security, tracking accuracy, and operational transparency across our logistics network.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">🚚</div>
+                            <div class="client-details">
+                                <h4 class="client-name">Logistics & Transportation Client</h4>
+                                <p class="client-title">FLEET MONITORING & RECOGNITION</p>
+                            </div>
+                        </div>
+                        <div class="dismiss-icon">×</div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Industry Expertise Section -->
+    <section class="industry-expertise-section">
+        <div class="industry-container">
+            <div class="industry-header">
+                <h2 class="industry-title">Industry Expertise</h2>
+                <p class="industry-description">Tailored AI & IoT solutions across diverse industries, delivering measurable results and transformative impact.</p>
+            </div>
+            
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="industry-name">Manufacturing</h3>
+                    <p class="industry-desc">Quality control, predictive maintenance, and production optimization</p>
+                    <div class="industry-stats">
+                        <span class="stat-item">150+ Projects</span>
+                        <span class="stat-item">95% Efficiency</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="industry-name">Healthcare</h3>
+                    <p class="industry-desc">Medical AI, patient monitoring, and diagnostic assistance</p>
+                    <div class="industry-stats">
+                        <span class="stat-item">80+ Projects</span>
+                        <span class="stat-item">98% Accuracy</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="industry-name">Logistics & Supply Chain</h3>
+                    <p class="industry-desc">Fleet tracking, warehouse automation, and route optimization</p>
+                    <div class="industry-stats">
+                        <span class="stat-item">120+ Projects</span>
+                        <span class="stat-item">40% Cost Reduction</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="industry-name">Agriculture</h3>
+                    <p class="industry-desc">Smart farming, crop monitoring, and automated irrigation</p>
+                    <div class="industry-stats">
+                        <span class="stat-item">60+ Projects</span>
+                        <span class="stat-item">30% Yield Increase</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="industry-name">Security & Surveillance</h3>
+                    <p class="industry-desc">Video analytics, facial recognition, and threat detection</p>
+                    <div class="industry-stats">
+                        <span class="stat-item">200+ Projects</span>
+                        <span class="stat-item">99% Detection Rate</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="industry-name">Energy & Utilities</h3>
+                    <p class="industry-desc">Smart grids, energy monitoring, and consumption optimization</p>
+                    <div class="industry-stats">
+                        <span class="stat-item">90+ Projects</span>
+                        <span class="stat-item">25% Energy Savings</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -672,6 +1613,70 @@
                             <span>Scalable infrastructure built for future growth</span>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-container">
+            <div class="process-header">
+                <h2 class="process-title">Our Process</h2>
+                <p class="process-description">A proven methodology that transforms your vision into reality through strategic planning, agile development, and continuous optimization.</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Discovery & Analysis</h3>
+                        <p class="step-description">We dive deep into your business needs, challenges, and goals to understand the full scope of your project.</p>
+                        <ul class="step-features">
+                            <li>Requirements gathering</li>
+                            <li>Technical feasibility study</li>
+                            <li>Stakeholder alignment</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Strategy & Planning</h3>
+                        <p class="step-description">We design a comprehensive roadmap with clear milestones, timelines, and success metrics.</p>
+                        <ul class="step-features">
+                            <li>Architecture design</li>
+                            <li>Technology selection</li>
+                            <li>Resource planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Development & Integration</h3>
+                        <p class="step-description">Agile development with regular sprints, continuous testing, and seamless integration with your existing systems.</p>
+                        <ul class="step-features">
+                            <li>Iterative development</li>
+                            <li>Quality assurance</li>
+                            <li>System integration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Deployment & Support</h3>
+                        <p class="step-description">Smooth deployment with comprehensive training, documentation, and ongoing support to ensure success.</p>
+                        <ul class="step-features">
+                            <li>Production deployment</li>
+                            <li>Team training</li>
+                            <li>24/7 support</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -756,7 +1761,6 @@
                         <li><a href="service.html">Services</a></li>
                         <li><a href="results.html">Results</a></li>
                         <li><a href="plans.html">Plans</a></li>
-                        <li><a href="client.html">Reviews</a></li>
                         <li><a href="whyus.html">Why Us</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="#team">Team</a></li>
@@ -769,7 +1773,6 @@
                         <li><a href="#terms">Terms of service</a></li>
                         <li><a href="#privacy">Privacy Policy</a></li>
                         <li><a href="#thankyou">Thank You</a></li>
-                        <li><a href="#404">404 Page</a></li>
                     </ul>
                 </div>
                 
